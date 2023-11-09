@@ -1,0 +1,138 @@
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  --teal: #3ccddd;
+  --orange: #ff7247;
+  --purple: #857de3;
+  --grey: #a3a3a3;
+}
+
+.container {
+  padding: .1rem 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+nav {
+  background: radial-gradient(var(--teal), var(--purple));
+  box-shadow: 0 30px 40px rgba(0,0,0,.1);
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: .05rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+.topnav {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.topnav__logo {
+  max-width: 104px;
+}
+
+.topnav__links {
+  border-radius: 1rem;
+}
+
+.topnav__links--list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.topnav a {
+  font-size: medium;
+  color: black;
+}
+.topnav__links a {
+  color: white;
+}
+
+.topnav__links--item a:hover {
+  border-bottom: 2px solid white;
+  transition: all .3s ease-in;
+}
+
+.topnav__logo,
+.topnav__aside {
+  padding: .1rem 1rem;
+}
+
+.topnav__aside {
+  justify-self: end;
+  /*this isn't making a LARGER fa icon centered with the text...
+  align-self: center;*/
+}
+
+.fa-arrow-right {
+  padding-right: .5rem;
+}
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateX(0);
+    -ms-transform:     translateX(0);
+    transform:         translateX(0)
+  }
+  40% {
+    -webkit-transform: translateX(-30px);
+    -ms-transform:     translateX(-30px);
+    transform:         translateX(-30px)
+  }
+  60% {
+    -webkit-transform: translateX(-15px);
+    -ms-transform:     translateX(-15px);
+    transform:         translateX(-15px)
+  }
+}
+.fa-arrow-right {  
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+.fa-arrow-right:hover {
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+.grey_container {
+  border-radius: 35px;
+  background-image: radial-gradient(white, var(--grey));
+  /*ending-shape: closest-corner;*/
+  padding: 3rem;
+  max-width: 300px;
+  text-align: center;
+}
