@@ -14,6 +14,7 @@ html {
 
 .container {
   padding: .1rem 1rem;
+  margin: 1rem;
 }
 
 body {
@@ -31,11 +32,6 @@ body,
 a {
   font-family: 'Neue Haas Grotesk Display Pro', Helvetica, Arial, sans-serif;
   letter-spacing: .1rem;
-}
-
-h2 {
-  padding-top: 4rem;
-  padding-bottom: 1rem;
 }
 
 p {
@@ -160,9 +156,30 @@ header {
   text-align: center;
 }
 
+/* Home hero 
+why isn't a radial background working? is "div" a problem? */
+.home-hero {
+    background-color: var(--purple);
+    border-radius: 20px;
+    text-align: center;
+    padding: 2rem 3rem 0;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}
 
-/* scrolling pills */
+.home-hero img {
+    max-width: 840px;
+}
 
+.home-hero__callouts {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1266px;
+    padding: 0 5.5rem;
+    align-content: center;
+}
+    /* scrolling pills */
 .pill {
     font-size: large;
     font-weight: 300;
@@ -204,13 +221,72 @@ header {
     /* javascript to make the rest (animation/scroll) rly happen: https://www.youtube.com/watch?v=iLmBy-HKIAw */
 }
 
-/* grouped list (artists, djs, etc) */
-.grouped-list {
+/* Home About Info */
+.home-info__button:hover {
+    text-decoration: underline;
 }
 
-.grouped-list__overview {
+.home-info__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-info__link-spacer {
+    border-top: 1px solid black;
+    margin-right: 24px;
+    width: 100%;
+}
+
+.home-info__link img {
+    max-width: 84px;
+}
+
+.home-info__link-arrow {
+    margin-left: 24px;
+}
+
+
+/* Home People Group List (artists, djs, etc) */
+.home-people__groups {
+    display: grid;
+}
+
+.home-people__groups-header {
     color: white;
-    background: radial-gradient(var(--orange),var(--purple));
-    padding: 1rem;
+    background: radial-gradient(var(--purple),var(--orange));
+    padding: 3rem;
     text-align: center;
+    border-radius: 8px;
+}
+
+.home-people__groups-list {
+    border-bottom: 1px solid black;
+}
+
+/* typography */
+.home-people__groups h3 {
+    font-size: 50px;
+    font-weight: 400;
+}
+.home-people__groups p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 16px;
+}
+
+.home-hero p {
+    font-size: 27px;
+    font-weight: 300;
+}
+
+.home-about__body {
+    text-align: center;
+    max-width: 1016;
+    /*margin: 10rem;*/
+    font-size: x-large;
+    line-height: 130%;
+    letter-spacing: .5px;
+    font-weight: 400;
 }
