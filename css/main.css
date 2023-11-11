@@ -18,7 +18,35 @@ html {
 
 body {
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+body,
+a {
+  font-family: 'Neue Haas Grotesk Display Pro', Helvetica, Arial, sans-serif;
+  letter-spacing: .1rem;
+}
+
+h2 {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: medium;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: .05rem;
 }
 
 img {
@@ -26,16 +54,11 @@ img {
   display: inline-block;
 }
 
+/* top navigation */
+
 nav {
   background: radial-gradient(var(--teal), var(--purple));
   box-shadow: 0 30px 40px rgba(0,0,0,.1);
-}
-
-a {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 300;
-  letter-spacing: .05rem;
 }
 
 header {
@@ -135,4 +158,59 @@ header {
   padding: 3rem;
   max-width: 300px;
   text-align: center;
+}
+
+
+/* scrolling pills */
+
+.pill {
+    font-size: large;
+    font-weight: 300;
+    color: var(--grey);
+    display: inline-block;
+    border: 1px solid var(--grey);
+    border-radius: 25px;
+    padding: .7rem;
+    text-transform: uppercase;
+    /*The text doesn't seem to be sitting on the baseline.... I tried text-align and text-justify center and it didn't seem to adjust anything*/
+}
+
+.pill--orange {
+    color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+.pill--teal {
+    color: var(--teal);
+    border: 1px solid var(--teal);
+}
+
+.pill--purple {
+    color: var(--purple);
+    border: 1px solid var(--purple);
+}
+
+.scroller {
+    max-width: 1600px;
+    overflow: hidden;
+}
+
+.scroller--inner {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    padding-block: .5rem;
+    /* javascript to make the rest (animation/scroll) rly happen: https://www.youtube.com/watch?v=iLmBy-HKIAw */
+}
+
+/* grouped list (artists, djs, etc) */
+.grouped-list {
+}
+
+.grouped-list__overview {
+    color: white;
+    background: radial-gradient(var(--orange),var(--purple));
+    padding: 1rem;
+    text-align: center;
 }
