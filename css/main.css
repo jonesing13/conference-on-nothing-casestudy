@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/kdv6knn.css");
 
 *,
 *:before,
@@ -32,6 +33,7 @@ body,
 a {
   font-family: 'Neue Haas Grotesk Display Pro', Helvetica, Arial, sans-serif;
   letter-spacing: .1rem;
+  text-align: center
 }
 
 p {
@@ -43,6 +45,7 @@ a {
     text-decoration: none;
     font-weight: 300;
     letter-spacing: .05rem;
+    position: relative;
 }
 
 img {
@@ -72,7 +75,7 @@ header {
 }
 
 .topnav__logo {
-  max-width: 104px;
+  max-height: 48px;
 }
 
 .topnav__links {
@@ -84,25 +87,30 @@ header {
   padding-left: 0;
   display: flex;
   justify-content: space-evenly;
-
 }
 
 .topnav a {
   font-size: medium;
   color: black;
+  text-align: left;
 }
 .topnav__links a {
   color: white;
 }
 
-.topnav__links--item a:hover {
-  border-bottom: 2px solid white;
-  transition: all .3s ease-in;
+.topnav__links--item a {
+    transition: all .3s ease-out;
 }
 
-.topnav__logo,
-.topnav__aside {
-  padding: .1rem 1rem;
+.topnav__links--item a:hover {
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+
+a:hover {
+    transition: all .3s ease-out;
+    cursor: pointer;
 }
 
 .topnav__aside {
@@ -111,7 +119,7 @@ header {
   align-self: center;*/
 }
 
-.fa-arrow-right {
+.topnav .fa-arrow-right {
   padding-right: .5rem;
 }
 
@@ -147,15 +155,6 @@ header {
   -moz-animation-name: bounce;
 }
 
-.grey_container {
-  border-radius: 35px;
-  background-image: radial-gradient(white, var(--grey));
-  /*ending-shape: closest-corner;*/
-  padding: 3rem;
-  max-width: 300px;
-  text-align: center;
-}
-
 /* Home hero 
 why isn't a radial background working? is "div" a problem? */
 .home-hero {
@@ -183,9 +182,9 @@ why isn't a radial background working? is "div" a problem? */
 .pill {
     font-size: large;
     font-weight: 300;
-    color: var(--grey);
+    color: black;
     display: inline-block;
-    border: 1px solid var(--grey);
+    border: 1px solid black;
     border-radius: 25px;
     padding: .7rem;
     text-transform: uppercase;
@@ -222,6 +221,10 @@ why isn't a radial background working? is "div" a problem? */
 }
 
 /* Home About Info */
+.home-about__body {
+    padding: 5rem 10rem 2rem;
+}
+
 .home-info__button:hover {
     text-decoration: underline;
 }
@@ -264,6 +267,10 @@ why isn't a radial background working? is "div" a problem? */
     border-bottom: 1px solid black;
 }
 
+.home-people__groups-list .fa-arrow-down {
+
+}
+
 /* typography */
 .home-people__groups h3 {
     font-size: 50px;
@@ -289,4 +296,67 @@ why isn't a radial background working? is "div" a problem? */
     line-height: 130%;
     letter-spacing: .5px;
     font-weight: 400;
+}
+
+email:hover {
+    text-decoration: underline;
+    transform: ease-out 0.3s;
+    cursor: pointer;
+}
+
+.footer-intro p,
+.footer-intro i {
+    color: white;
+}
+
+.footer-body {
+    font-size: small;
+    font-weight: 300;
+    line-height: 16px;
+    padding: 10rem 10rem 1rem;
+}
+
+.footer-callout__item p {
+    font-size: larger;
+    letter-spacing: .15rem;
+    line-height: 24px;
+}
+
+/* footer */
+.footer {
+    border: 3px solid var(--teal);
+    background: linear-gradient(#ff7247, #ffffff);
+}
+
+.footer-callout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.footer__contact {
+    font-size: x-large;
+    font-weight: 800;
+    padding-top: 10rem;
+}
+
+.footer__contact a {
+    text-transform: none;
+    font-weight: 800;
+}
+
+.footer__team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin: 0 10rem 10rem;
 }
