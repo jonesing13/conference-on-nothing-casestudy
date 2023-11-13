@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../css/main.css">	
 	<script src="https://kit.fontawesome.com/97d1e8b022.js" crossorigin="anonymous"></script>
-	<!-- NEUE GROTESK FONT FILE -->
 	<title>CON-Case Study Components</title>
 </head>
 
@@ -140,19 +139,40 @@
 	</a>
 </div>
 
+<section>
 	<h2>Home People Groups</h2>
-	<section class="home-people__groups">
-		<h2>People</h2>
-		<div class="home-people__groups-header">
+	<div class="home-people__title">
+		<span class="spacer-left"></span>
+		<div class="home-people__title--block">
+			<hr class="home-people__title-decoration">
+			<h2 class="home-people__text">People</h2>
+			<hr class="home-people__title-decoration">
+		</div>
+		<span class="spacer-right"></span>
+	</div>
+
+	<div class="home-people__groups">
+		<div class="home-people__groups-header--artists">
 			<h3>Artists</h3>
 			<p>
 				A group of artists with a mixture of specializations, including sculpture, photography, architecture, fine arts, literature and computer graphics. They all meet at interdisciplinary performances in a challenging environment far from everyday galleries. In collaboration with the scientists, they developed the main conference contributions, the installations, and the event's gradation and form.
 			</p>
-		</div>
-
+		</div> <!-- artist header -->
+		<div class="home-people__groups-header--djs">
+			<h3>Djs</h3>
+			<p>
+				A line-up of external artists that will ignite the night party in the main room from the stage, i.e. the infinite coffee break once the nothing is achieved, being the main conference goal. The sonic representations of new patterns emerging from the void through carefully chosen programming are accompanied at first by visuals from the core group of artists who take over the decor in the main room, as well as the SALO lounge.
+			</p>
+		</div>  <!-- dj header -->
+		<div class="home-people__groups-header--scientists">
+			<h3>Scientists</h3>
+			<p>
+				A group of natural scientists with a mixture of expertise, including cosmology, quantum physics, astronomy, biophysics, and history of science. They all helped to develop the artworks shown, and they equally contribute to the conference program alongside the core group of artists. Working everyday with natural phenomena, they are guides to the corners of the universe and human knowledge.
+			</p>
+		</div> <!-- scientist header -->
 		<div class="home-people__groups-list">
 			<div class="home-people__groups-person">
-				<h4>
+				<h4 class="home-people__groups-person-name">
 					<a href="#">Aleksandra Vajd <i class="fa-solid fa-arrow-down fa-xl"></i></a>
 				</h4>
 				<!--
@@ -160,43 +180,39 @@
 					Aleksandra Vajd is a Prague-based Slovenian artist and currently runs the Studio Of Photography at the Academy of Arts, Architecture and Design (AAAD) and is an assistant professor at the Academy of Visual Arts in Ljubljana where she teaches seminar on Theory and practice of Photographic medium. In her art practice, Aleksandra explores the medium of photography and pushes at its limitations. She works with the image as an object, she makes use of space, and she is interested in the materiality of light. Her individual works of art or collaborative projects have been presented in e.g. Galerie Rudolfinum in Prague, Cukrarna in Ljubljana, the Astrup Fearnley Museet in Oslo, Glasgow's Street Level Photoworks gallery, Museum of Modern Art Ljubljana, Prague City Gallery, Kyoto's Zuiun-an-Art Project Space, Museum of Contemporary Photography in Chicago, the City Gallery in Ljubljana or the < rotor > centre for contemporary art in Graz. Vajd has also participated in several photographic festivals and biennales, including the Photo Festival in Krakow, Leipzig, Liège, and the 9th Triennale of Contemporary Art U3 in Ljubljana. In recent years, she has shifted her focus to reductive photographic work, exploring the borders of the medium with particular emphasis on its materiality and its scale. Photograph: Aleksandra Vajd
 				</p>
 				-->
-			</div>
-
-			<div class="grouped-list__item">
-				<h4>
+			</div> <!-- artist detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
 					<a href="#">Anetta Mona ChiSa <i class="fa-solid fa-arrow-down fa-xl"></i></a>
 				</h4>
 				<!--
 				<p>
-					Anetta Mona Chişa is currently based at the Academy of Fine Arts in Prague. Her artistic practice usually takes place under the form of dialogues and collaborative working, exploring performative materialities of environments and technologies, their poetics and politics. The artist is attuned to the idea of shifting systems of reference, of the necessity of change and adaptive reasoning to a world whose boundaries are more and more constrained to an idea of the market, of capitalist axioms and an almost mystical digitalization. Her individual works and collaborative projects were exhibited in The 8th Floor in New York, n.b.k. in Berlin, Galerie Rudolfinum Prague, Cukrarna in Ljubljana, Gesellschaft für Aktuelle Kunst Bremen, Lunds Konsthall, MoCA Miami, Kunstraum Niederösterreich in Vienna, Haifa Museum of Art, The Power Plant in Toronto, the Taipei Biennale, Schirn Kunsthalle Frankfurt, the Moscow Biennale, or the Venice Biennale, among others. Photograph: Aleksandra Vajd  
+					Anetta Mona Chi&#351;a is currently based at the Academy of Fine Arts in Prague. Her artistic practice usually takes place under the form of dialogues and collaborative working, exploring performative materialities of environments and technologies, their poetics and politics. The artist is attuned to the idea of shifting systems of reference, of the necessity of change and adaptive reasoning to a world whose boundaries are more and more constrained to an idea of the market, of capitalist axioms and an almost mystical digitalization. Her individual works and collaborative projects were exhibited in The 8th Floor in New York, n.b.k. in Berlin, Galerie Rudolfinum Prague, Cukrarna in Ljubljana, Gesellschaft für Aktuelle Kunst Bremen, Lunds Konsthall, MoCA Miami, Kunstraum Niederösterreich in Vienna, Haifa Museum of Art, The Power Plant in Toronto, the Taipei Biennale, Schirn Kunsthalle Frankfurt, the Moscow Biennale, or the Venice Biennale, among others. Photograph: Aleksandra Vajd  
 				</p>
 				-->
-			</div>
-
-			<div class="grouped-list__item">
-				<h4>
+			</div> <!-- artist detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
 					<a href="#">VojtEch Radakulan <i class="fa-solid fa-arrow-down fa-xl"></i></a>
 				</h4>
 				<!--
 				<p>
-					Vojtěch Radakulan works in the fields of fine arts, architecture, and interactive computer graphics, investigating these in both an artistic and scientific way. He examines the world by reconstruciting it in a process of world building. His tools span from hand drawings, text, physical installations, game engines, rendering software, or psychophysics. In his reflections of the world, visitors can try to become something or someone else, see complicated topics like new technologies, asymmetric relationships, or globalization issues from a perspective of another human, computer, or a pine cone. He took part in exhibitions like Venice architecture Bienniale (2021), Ars Electronica (2018), and received the Jindřich Chalupecký Award (2022). He has a master degree in sculpture and architecture. Currently he is a PhD candidate at CTU FEL at the department of computer graphics and interaction and teaches at FAMU CAS. Photograph: artist's archive, vojtechradakulan.com
+					Vojt&#277;ch Radakulan works in the fields of fine arts, architecture, and interactive computer graphics, investigating these in both an artistic and scientific way. He examines the world by reconstruciting it in a process of world building. His tools span from hand drawings, text, physical installations, game engines, rendering software, or psychophysics. In his reflections of the world, visitors can try to become something or someone else, see complicated topics like new technologies, asymmetric relationships, or globalization issues from a perspective of another human, computer, or a pine cone. He took part in exhibitions like Venice architecture Bienniale (2021), Ars Electronica (2018), and received the Jind&#345;ich Chalupeck&yacute; Award (2022). He has a master degree in sculpture and architecture. Currently he is a PhD candidate at CTU FEL at the department of computer graphics and interaction and teaches at FAMU CAS. Photograph: artist's archive, vojtechradakulan.com
 				</p>
 				-->
-			</div>
-
-			<div class="grouped-list__item">
-				<h4>
+			</div> <!-- artist detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
 					<a href="#">Richard Loskot <i class="fa-solid fa-arrow-down fa-xl"></i></a>
 				</h4>
 				<!--
 				<p>
-					Richard Loskot is a graduate of the Faculty of Arts and Architecture at the Technical University in Liberec, in the Studio of Visual Communication. For two years he studied at Akademie der Bildenen Künste in Munich, in the Studio of Magdalena Jetelova. He currently leads the Studio of Environmental Design at the Faculty of Arts and Architecture in Liberec. He was nominated for the Jindřich Chalupecký Award four times, and he regularly exhibits both in the Czech Republic and abroad. His work is based on process, creating situations and environments which work with the possibilities of human perception and the technological breakthroughs of the present. He uses sophisticated technology and media, which may trick the viewer. He has exhibited in the National Gallery in Prague, House of Arts in Brno, the Gallery of Prague, at Biennale Giovani Monza, the < rotor > center of contemporary art in Graz, and Astrup Fearnley Museet in Oslo. Photograph: artist's archive, Technical University of Liberec
+					Richard Loskot is a graduate of the Faculty of Arts and Architecture at the Technical University in Liberec, in the Studio of Visual Communication. For two years he studied at Akademie der Bildenen Künste in Munich, in the Studio of Magdalena Jetelova. He currently leads the Studio of Environmental Design at the Faculty of Arts and Architecture in Liberec. He was nominated for the Jind&#345;ich Chalupeck&yacute; Award four times, and he regularly exhibits both in the Czech Republic and abroad. His work is based on process, creating situations and environments which work with the possibilities of human perception and the technological breakthroughs of the present. He uses sophisticated technology and media, which may trick the viewer. He has exhibited in the National Gallery in Prague, House of Arts in Brno, the Gallery of Prague, at Biennale Giovani Monza, the < rotor > center of contemporary art in Graz, and Astrup Fearnley Museet in Oslo. Photograph: artist's archive, Technical University of Liberec
 				</p>
 				-->
-			</div>
-
-			<div class="grouped-list__item">
-				<h4>
+			</div> <!-- artist detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
 					<a href="#">Elvia Wilk <i class="fa-solid fa-arrow-down fa-xl"></i></a>
 				</h4>
 				<!--
@@ -204,26 +220,186 @@
 					Elvia Wilk is a writer and editor living in New York. She often contributes to publications like Frieze, Mousse, Metropolis, and Artforum. From 2012 to 2016 she was a founding editor at uncube magazine, and from 2016 to 2018 she was the publications editor for transmediale and a contributing editor at Rhizome. Currently, she's a contributing editor at e-flux journal and writes a monthly column on ethical quandaries for Monopol magazine. She received a masters at the New School for Social Research in New York and has taught at the University of the Arts Berlin, Eugene Lang College, and City College of New York. She is the recipient of a 2019 Andy Warhol Arts Writers grant and is a 2020 fellow at the Berggruen Institute. Wilk touches on ecology, dystopia, the female experience, virtual reality, and fiction writing. In “Death by Landscape: essays”, published in 2022 (Soft Skull), she juxtaposes two novels both of which have plots about a “woman falling in love with a black hole”.  She will give an online talk. Photograph: Calla Henkel and Max Pitegoff
 				</p>
 				-->
-			</div>
-		</div>
-	</section>
+			</div> <!-- artist detail -->
+		</div> <!-- artists list -->
+		<div class="home-people__groups-list">
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">NDRX <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Aleksandra Vajd is a Prague-based Slovenian artist and currently runs the Studio Of Photography at the Academy of Arts, Architecture and Design (AAAD) and is an assistant professor at the Academy of Visual Arts in Ljubljana where she teaches seminar on Theory and practice of Photographic medium. In her art practice, Aleksandra explores the medium of photography and pushes at its limitations. She works with the image as an object, she makes use of space, and she is interested in the materiality of light. Her individual works of art or collaborative projects have been presented in e.g. Galerie Rudolfinum in Prague, Cukrarna in Ljubljana, the Astrup Fearnley Museet in Oslo, Glasgow's Street Level Photoworks gallery, Museum of Modern Art Ljubljana, Prague City Gallery, Kyoto's Zuiun-an-Art Project Space, Museum of Contemporary Photography in Chicago, the City Gallery in Ljubljana or the < rotor > centre for contemporary art in Graz. Vajd has also participated in several photographic festivals and biennales, including the Photo Festival in Krakow, Leipzig, Liège, and the 9th Triennale of Contemporary Art U3 in Ljubljana. In recent years, she has shifted her focus to reductive photographic work, exploring the borders of the medium with particular emphasis on its materiality and its scale. Photograph: Aleksandra Vajd
+				</p>
+				-->
+			</div> <!-- dj detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">ARNII <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Anetta Mona Chi&#351;a is currently based at the Academy of Fine Arts in Prague. Her artistic practice usually takes place under the form of dialogues and collaborative working, exploring performative materialities of environments and technologies, their poetics and politics. The artist is attuned to the idea of shifting systems of reference, of the necessity of change and adaptive reasoning to a world whose boundaries are more and more constrained to an idea of the market, of capitalist axioms and an almost mystical digitalization. Her individual works and collaborative projects were exhibited in The 8th Floor in New York, n.b.k. in Berlin, Galerie Rudolfinum Prague, Cukrarna in Ljubljana, Gesellschaft für Aktuelle Kunst Bremen, Lunds Konsthall, MoCA Miami, Kunstraum Niederösterreich in Vienna, Haifa Museum of Art, The Power Plant in Toronto, the Taipei Biennale, Schirn Kunsthalle Frankfurt, the Moscow Biennale, or the Venice Biennale, among others. Photograph: Aleksandra Vajd  
+				</p>
+				-->
+			</div> <!-- dj detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">Nina Farrina <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Vojt&#277;ch Radakulan works in the fields of fine arts, architecture, and interactive computer graphics, investigating these in both an artistic and scientific way. He examines the world by reconstruciting it in a process of world building. His tools span from hand drawings, text, physical installations, game engines, rendering software, or psychophysics. In his reflections of the world, visitors can try to become something or someone else, see complicated topics like new technologies, asymmetric relationships, or globalization issues from a perspective of another human, computer, or a pine cone. He took part in exhibitions like Venice architecture Bienniale (2021), Ars Electronica (2018), and received the Jind&#345;ich Chalupeck&yacute; Award (2022). He has a master degree in sculpture and architecture. Currently he is a PhD candidate at CTU FEL at the department of computer graphics and interaction and teaches at FAMU CAS. Photograph: artist's archive, vojtechradakulan.com
+				</p>
+				-->
+			</div> <!-- dj detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">mezi patri klid <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Richard Loskot is a graduate of the Faculty of Arts and Architecture at the Technical University in Liberec, in the Studio of Visual Communication. For two years he studied at Akademie der Bildenen Künste in Munich, in the Studio of Magdalena Jetelova. He currently leads the Studio of Environmental Design at the Faculty of Arts and Architecture in Liberec. He was nominated for the Jind&#345;ich Chalupeck&yacute; Award four times, and he regularly exhibits both in the Czech Republic and abroad. His work is based on process, creating situations and environments which work with the possibilities of human perception and the technological breakthroughs of the present. He uses sophisticated technology and media, which may trick the viewer. He has exhibited in the National Gallery in Prague, House of Arts in Brno, the Gallery of Prague, at Biennale Giovani Monza, the < rotor > center of contemporary art in Graz, and Astrup Fearnley Museet in Oslo. Photograph: artist's archive, Technical University of Liberec
+				</p>
+				-->
+			</div> <!-- dj detail -->
+		</div> <!-- djs list -->
+		<div class="home-people__groups-list">
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">Michael MalinskY <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Aleksandra Vajd is a Prague-based Slovenian artist and currently runs the Studio Of Photography at the Academy of Arts, Architecture and Design (AAAD) and is an assistant professor at the Academy of Visual Arts in Ljubljana where she teaches seminar on Theory and practice of Photographic medium. In her art practice, Aleksandra explores the medium of photography and pushes at its limitations. She works with the image as an object, she makes use of space, and she is interested in the materiality of light. Her individual works of art or collaborative projects have been presented in e.g. Galerie Rudolfinum in Prague, Cukrarna in Ljubljana, the Astrup Fearnley Museet in Oslo, Glasgow's Street Level Photoworks gallery, Museum of Modern Art Ljubljana, Prague City Gallery, Kyoto's Zuiun-an-Art Project Space, Museum of Contemporary Photography in Chicago, the City Gallery in Ljubljana or the < rotor > centre for contemporary art in Graz. Vajd has also participated in several photographic festivals and biennales, including the Photo Festival in Krakow, Leipzig, Liège, and the 9th Triennale of Contemporary Art U3 in Ljubljana. In recent years, she has shifted her focus to reductive photographic work, exploring the borders of the medium with particular emphasis on its materiality and its scale. Photograph: Aleksandra Vajd
+				</p>
+				-->
+			</div> <!-- scientist detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">Mariateresa Crosta <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Anetta Mona Chi&#351;a is currently based at the Academy of Fine Arts in Prague. Her artistic practice usually takes place under the form of dialogues and collaborative working, exploring performative materialities of environments and technologies, their poetics and politics. The artist is attuned to the idea of shifting systems of reference, of the necessity of change and adaptive reasoning to a world whose boundaries are more and more constrained to an idea of the market, of capitalist axioms and an almost mystical digitalization. Her individual works and collaborative projects were exhibited in The 8th Floor in New York, n.b.k. in Berlin, Galerie Rudolfinum Prague, Cukrarna in Ljubljana, Gesellschaft für Aktuelle Kunst Bremen, Lunds Konsthall, MoCA Miami, Kunstraum Niederösterreich in Vienna, Haifa Museum of Art, The Power Plant in Toronto, the Taipei Biennale, Schirn Kunsthalle Frankfurt, the Moscow Biennale, or the Venice Biennale, among others. Photograph: Aleksandra Vajd  
+				</p>
+				-->
+			</div> <!-- scientist detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">OldRich SemerAk <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Vojt&#277;ch Radakulan works in the fields of fine arts, architecture, and interactive computer graphics, investigating these in both an artistic and scientific way. He examines the world by reconstruciting it in a process of world building. His tools span from hand drawings, text, physical installations, game engines, rendering software, or psychophysics. In his reflections of the world, visitors can try to become something or someone else, see complicated topics like new technologies, asymmetric relationships, or globalization issues from a perspective of another human, computer, or a pine cone. He took part in exhibitions like Venice architecture Bienniale (2021), Ars Electronica (2018), and received the Jind&#345;ich Chalupeck&yacute; Award (2022). He has a master degree in sculpture and architecture. Currently he is a PhD candidate at CTU FEL at the department of computer graphics and interaction and teaches at FAMU CAS. Photograph: artist's archive, vojtechradakulan.com
+				</p>
+				-->
+			</div> <!-- scientist detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">Jimena Canales <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Richard Loskot is a graduate of the Faculty of Arts and Architecture at the Technical University in Liberec, in the Studio of Visual Communication. For two years he studied at Akademie der Bildenen Künste in Munich, in the Studio of Magdalena Jetelova. He currently leads the Studio of Environmental Design at the Faculty of Arts and Architecture in Liberec. He was nominated for the Jind&#345;ich Chalupeck&yacute; Award four times, and he regularly exhibits both in the Czech Republic and abroad. His work is based on process, creating situations and environments which work with the possibilities of human perception and the technological breakthroughs of the present. He uses sophisticated technology and media, which may trick the viewer. He has exhibited in the National Gallery in Prague, House of Arts in Brno, the Gallery of Prague, at Biennale Giovani Monza, the < rotor > center of contemporary art in Graz, and Astrup Fearnley Museet in Oslo. Photograph: artist's archive, Technical University of Liberec
+				</p>
+				-->
+			</div> <!-- scientist detail -->
+			<div class="home-people__groups-person">
+				<h4 class="home-people__groups-person-name">
+					<a href="#">TomAS ManCal <i class="fa-solid fa-arrow-down fa-xl"></i></a>
+				</h4>
+				<!--
+				<p>
+					Elvia Wilk is a writer and editor living in New York. She often contributes to publications like Frieze, Mousse, Metropolis, and Artforum. From 2012 to 2016 she was a founding editor at uncube magazine, and from 2016 to 2018 she was the publications editor for transmediale and a contributing editor at Rhizome. Currently, she's a contributing editor at e-flux journal and writes a monthly column on ethical quandaries for Monopol magazine. She received a masters at the New School for Social Research in New York and has taught at the University of the Arts Berlin, Eugene Lang College, and City College of New York. She is the recipient of a 2019 Andy Warhol Arts Writers grant and is a 2020 fellow at the Berggruen Institute. Wilk touches on ecology, dystopia, the female experience, virtual reality, and fiction writing. In “Death by Landscape: essays”, published in 2022 (Soft Skull), she juxtaposes two novels both of which have plots about a “woman falling in love with a black hole”.  She will give an online talk. Photograph: Calla Henkel and Max Pitegoff
+				</p>
+				-->
+			</div> <!-- scientist detail -->
+		</div> <!-- scientist list -->
+	</div> <!-- home people groups grid -->
+</section> <!-- home people groups -->
 
 
-    <section>
+<section class="container home-program">
+	<div class="home-program__title">
+		<img src="" alt="wobble">
+		<h2>
+			Program
+		</h2>
+	</div>
+
+	<button class="home-program__timeslot">
+		<img class="home-program__timeslot-type" src="#" alt="INST">
+		<!-- class="home-program__timeslot-details"> -->
+		<time>21:45-01:00</time>
+		<p>
+			SALO Bar
+		</p>
+		<h3 class="home-program__timeslot-title">Ocean System</h3>
+		<!-- <div class="home-program__timeslot-icon"> -->
+		<i class="fa-solid fa-arrow-down fa-2xl"></i>
+		<!--
+		<p>
+			Come and enjoy at any time, the unconventional conference environment situated in a night club. Sit down and discuss topics during the breaks. Have some sweets, but be careful, nothing is being served tonight.
+		</p>
+		-->
+	</button>
+	
+	<button class="home-program__timeslot">
+		<img src="#" alt="PERF">
+		<time>21:45-22:10</time>
+		<p>
+			Main Room
+		</p>
+		<h3 class="home-program__timeslot-title">Nothing is everything. Everything is nothing. But mind your stomach, its dimensions are changing!</h3>
+		<i class="fa-solid fa-arrow-down fa-2xl"></i>
+		<!--
+		<p>
+			Description
+		</p>
+		-->
+	</button>
+
+	<button class="home-program__timeslot">
+		<img src="#" alt="MUS">
+		<time>22:30-06:00</time>
+		<p>
+			Stage
+		</p>
+		<h3 class="home-program__timeslot-title">The Infinite Coffee Break</h3>
+		<i class="fa-solid fa-arrow-down fa-2xl"></i>
+		<!--
+		<p>
+			Description
+		</p>
+		-->
+	</button>
+</section>
+
+
+
+
+
+
+
+
+    <section class="partners">
         <h2>Partners</h2>
 
-        <img src="#" alt="FULLMOON Music Magazine">
-        <img src="#" alt="Ministry of Culture Czech Republic">
-        <img src="#" alt="State Fund of Culture of the Czech Republic">
-        <img src="#" alt="Astronomical Institute">
-        <img src="#" alt="Art District">
-        <img src="#" alt="logo">
+		<div class="partners-logos">
+			<img src="#" alt="FULLMOON Music Magazine">
+			<img src="#" alt="Ministry of Culture Czech Republic">
+			<img src="#" alt="State Fund of Culture of the Czech Republic">
+			<img src="#" alt="Astronomical Institute">
+			<img src="#" alt="Art District">
+			<img src="#" alt="Unknown logo">
+		</div>
     </section>
 
     <footer class="footer">
 		<div class="footer-intro">
 			<p class="footer-body">
-				The event “Conference on Nothing in Arts and Science” is part of a yearlong project “Let us drag you into the mysteries of nature” supported from the Ministry of Culture, Czech Republic, State Fund of Culture of the Czech Republic, and the Prague District 7. It is formally covered by Velrybí srdce, z.s., a non-profit association established in June 2022 on the following pillars:
+				The event “Conference on Nothing in Arts and Science” is part of a yearlong project “Let us drag you into the mysteries of nature” supported from the Ministry of Culture, Czech Republic, State Fund of Culture of the Czech Republic, and the Prague District 7. It is formally covered by Velryb&iacute; srdce, z.s., a non-profit association established in June 2022 on the following pillars:
 			</p>
 			<div class="footer-callout">
 				<div class="footer-callout__item">
@@ -267,22 +443,22 @@
             <div class="footer__team">
                 <div class="footer__team-member">
                     <h3>Coordination</h3>
-                    <p>Jakub Podgorný</p>
+                    <p>Jakub Podgorn&yacute;</p>
                     <email>jakub@conferenceonnothing.cz</email>
                 </div> <!-- footer team member -->
                 <div class="footer__team-member">
                     <h3>Production</h3>
-                    <p>Eva Kratochvílová</p>
+                    <p>Eva Kratochv&iacute;lov&aacute;</p>
                     <email>eva@conferenceonnothing.cz</email>
                 </div> <!-- footer team member -->
                 <div class="footer__team-member">
                     <h3>Programming</h3>
-                    <p>Vojtěch Märc &amp; Heartnoize Promotion</p>
+                    <p>Vojt&#277;ch Märc &amp; Heartnoize Promotion</p>
                     <email>dramaturgie@conferenceonnothing.cz</email>
                 </div> <!-- footer team member -->
                 <div class="footer__team-member">
                     <h3>PR</h3>
-                    <p>Sabina Coufalová</p>
+                    <p>Sabina Coufalov&aacute;</p>
                     <email>sabina@conferenceonnothing.cz</email>
                 </div> <!-- footer team member -->
             </div> <!-- footer team -->
@@ -323,7 +499,7 @@
 			</div>
 			
 			<div class="footer__copyright">
-				<p>Webdesign - <a>Pavel Holomek</a> / Development - <email>studio_bauhaus.</email> &copy;2023.</p>
+				<p>Webdesign - <a href="https://www.instagram.com/pa.jinac/" target="_blank" class="footer__copyright--link">Pavel Holomek</a> / Development - <email class="footer__copyright--CTA">studio_bauhaus.</email> &copy;2023.</p>
 			</div>
 		</div> <!-- footer common -->
     </footer>

@@ -46,11 +46,19 @@ a {
     font-weight: 300;
     letter-spacing: .05rem;
     position: relative;
+    color: black;
 }
 
 img {
   max-width: 100%;
   display: inline-block;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background: black;
+    align-items: center;
 }
 
 /* top navigation */
@@ -251,11 +259,30 @@ why isn't a radial background working? is "div" a problem? */
 
 
 /* Home People Group List (artists, djs, etc) */
+.home-people__title {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-self: center;
+}
+
+.home-people__title--block {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
 .home-people__groups {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem
 }
 
 .home-people__groups-header {
+    display: flex;
+}
+
+.home-people__groups-header--artists {
     color: white;
     background: radial-gradient(var(--purple),var(--orange));
     padding: 3rem;
@@ -263,7 +290,27 @@ why isn't a radial background working? is "div" a problem? */
     border-radius: 8px;
 }
 
+.home-people__groups-header--djs {
+    color: white;
+    background: radial-gradient(var(--teal),var(--purple));
+    padding: 3rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.home-people__groups-header--scientists {
+    color: white;
+    background: radial-gradient(var(--orange),var(--teal));
+    padding: 3rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
 .home-people__groups-list {
+    display: grid;
+}
+
+.home-people__groups-person {
     border-bottom: 1px solid black;
 }
 
@@ -322,9 +369,72 @@ email:hover {
     line-height: 24px;
 }
 
+.home-people__groups-person-name a {
+    font-size: large;
+    text-transform: capitalize;
+}
+
+/* home-program */
+.home-program {
+    padding: 4rem 0;
+}
+
+.home-program__title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+}
+
+.home-program h2 {
+    justify-content: left;
+}
+
+button {
+    background: none;
+    border: none;
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.home-program__timeslot {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 4fr 1fr;
+    justify-items: left;
+}
+
+.home-program__timeslot i,
+.home-program__timeslot img,
+.home-program__timeslot time {
+    align-self: center;
+}
+
+.home-program__timeslot i,
+.home-program__timeslot img {
+    justify-self: center;
+}
+
 /* footer */
+.partners {
+    background: radial-gradient(var(--teal), #ffffff);
+    padding: 4rem;
+}
+
+.partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.partners-logos img {
+    padding-left: 4rem;
+    padding-top: 4rem;
+}
+
 .footer {
-    border: 3px solid var(--teal);
     background: linear-gradient(#ff7247, #ffffff);
 }
 
@@ -360,3 +470,17 @@ email:hover {
     gap: 1rem;
     margin: 0 10rem 10rem;
 }
+
+.footer__copyright p {
+    font-size: small;
+}
+/*
+.footer__copyright--link a {
+    text-transform: ;
+}
+
+.footer__copyright a:hover {
+
+    text-decoration: underline;
+}
+*/
