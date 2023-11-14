@@ -163,10 +163,9 @@ a:hover {
   -moz-animation-name: bounce;
 }
 
-/* Home hero 
-why isn't a radial background working? is "div" a problem? */
+/* Home hero */
 .home-hero {
-    background-color: var(--purple);
+    background: radial-gradient(var(--teal),var(--purple));
     border-radius: 20px;
     text-align: center;
     padding: 2rem 3rem 0;
@@ -214,9 +213,33 @@ why isn't a radial background working? is "div" a problem? */
     border: 1px solid var(--purple);
 }
 
+@keyframes scroll {
+    from {
+        margin-left: 100%;
+        width: 500%;
+    }
+    
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
 .scroller {
     max-width: 1600px;
-    overflow: hidden;
+    /*overflow: hidden;*/ /* I'm ok showing overflow w animation... but doing animation w css does make the page horizontally scrollable which is definitely weird and not QUITE right like the OG page does it */
+    /* set animation for page */
+    -webkit-animation-duration: 25s;
+    animation-duration: 25s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    /* link to keyframe w animation rules */
+    animation-name: scroll;
+    -moz-animation-name: scroll;
 }
 
 .scroller--inner {
@@ -246,7 +269,7 @@ why isn't a radial background working? is "div" a problem? */
 .home-info__link-spacer {
     border-top: 1px solid black;
     margin-right: 24px;
-    width: 100%;
+    width: 90%;
 }
 
 .home-info__link img {
@@ -314,8 +337,8 @@ why isn't a radial background working? is "div" a problem? */
     border-bottom: 1px solid black;
 }
 
-.home-people__groups-list .fa-arrow-down {
-
+.home-people__groups-icon {
+    justify-content: right;
 }
 
 /* typography */
@@ -354,6 +377,21 @@ email:hover {
 .footer-intro p,
 .footer-intro i {
     color: white;
+}
+
+.footer__team-name,
+.footer__team-detail {
+    font-size: small;
+    letter-spacing: .8px;
+}
+
+.footer__team-name {
+    font-weight: 800;
+    margin: 1rem auto .25rem;
+}
+
+.footer__team-detail {
+    margin: .1rem;
 }
 
 .footer-body {
@@ -438,6 +476,10 @@ button:hover {
     background: linear-gradient(#ff7247, #ffffff);
 }
 
+.footer-intro {
+    padding: 1rem;
+}
+
 .footer-callout {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -455,7 +497,7 @@ button:hover {
 .footer__contact {
     font-size: x-large;
     font-weight: 800;
-    padding-top: 10rem;
+    padding-top: 8rem;
 }
 
 .footer__contact a {
@@ -484,3 +526,25 @@ button:hover {
     text-decoration: underline;
 }
 */
+
+.sidenav {
+    background: var(--grey);
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+.sidenav a {
+    padding: .5rem .5rem 1.5rem .5rem;
+    text-decoration: none;
+    font-size: 27px;
+    display: block;
+}
+
+main {
+    margin-left: 240px;
+}
