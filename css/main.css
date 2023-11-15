@@ -175,7 +175,10 @@ a:hover {
 }
 
 .home-hero img {
-    max-width: 840px;
+    max-width: 100%;
+    height: auto;
+    padding: 6rem 8rem;
+
 }
 
 .home-hero__callouts {
@@ -213,6 +216,7 @@ a:hover {
     border: 1px solid var(--purple);
 }
 
+/*
 @keyframes scroll {
     from {
         margin-left: 100%;
@@ -224,11 +228,12 @@ a:hover {
         width: 100%;
     }
 }
+*/
 
 .scroller {
     max-width: 1600px;
-    /*overflow: hidden;*/ /* I'm ok showing overflow w animation... but doing animation w css does make the page horizontally scrollable which is definitely weird and not QUITE right like the OG page does it */
-    /* set animation for page */
+    overflow: hidden; /* I'm ok showing overflow w animation... but doing animation w css does make the page horizontally scrollable which is definitely weird and not QUITE right like the OG page does it */
+    /* set animation for page 
     -webkit-animation-duration: 25s;
     animation-duration: 25s;
     -webkit-animation-fill-mode: both;
@@ -237,9 +242,9 @@ a:hover {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
-    /* link to keyframe w animation rules */
+    /* link to keyframe w animation rules 
     animation-name: scroll;
-    -moz-animation-name: scroll;
+    -moz-animation-name: scroll; */
 }
 
 .scroller--inner {
@@ -283,6 +288,7 @@ a:hover {
 
 /* Home People Group List (artists, djs, etc) */
 .home-people__title {
+    padding-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -342,6 +348,15 @@ a:hover {
 }
 
 /* typography */
+.component-title {
+    font-size: 72px;
+    padding-top: 4rem;
+    background: -webkit-linear-gradient(45deg,var(--orange),var(--teal));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .home-people__groups h3 {
     font-size: 50px;
     font-weight: 400;
@@ -528,20 +543,21 @@ button:hover {
 */
 
 .sidenav {
-    background: var(--grey);
+    background: radial-gradient(white, var(--grey));
     height: 100%;
     width: 240px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    padding: 1rem;
+    padding: 4rem 1rem;
 }
 
 .sidenav a {
-    padding: .5rem .5rem 1.5rem .5rem;
+    padding: 0 0 2rem;
     text-decoration: none;
-    font-size: 27px;
+    font-size: regular;
+    font-weight: 800;
     display: block;
 }
 
