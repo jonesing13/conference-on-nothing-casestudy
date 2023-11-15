@@ -127,7 +127,7 @@ a:hover {
   align-self: center;*/
 }
 
-.topnav .fa-arrow-right {
+.topnav .fa-arrow-right-bounce {
   padding-right: .5rem;
 }
 
@@ -148,7 +148,7 @@ a:hover {
     transform:         translateX(-15px)
   }
 }
-.fa-arrow-right {  
+.fa-arrow-right-bounce {  
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
@@ -158,7 +158,7 @@ a:hover {
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
-.fa-arrow-right:hover {
+.fa-arrow-right-bounce:hover {
   animation-name: bounce;
   -moz-animation-name: bounce;
 }
@@ -304,7 +304,8 @@ a:hover {
 .home-people__groups {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5rem
+    align-items: center;
+    gap: .25rem
 }
 
 .home-people__groups-header {
@@ -353,6 +354,7 @@ a:hover {
     padding-top: 4rem;
     background: -webkit-linear-gradient(45deg,var(--orange),var(--teal));
     background-size: 100%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -457,6 +459,7 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 4fr 1fr;
     justify-items: left;
+    align-items: center;
 }
 
 .home-program__timeslot i,
@@ -470,10 +473,26 @@ button:hover {
     justify-self: center;
 }
 
+.home-program__timeslot h3,
+.home-program__timeslot p,
+.home-program__timeslot time {
+    margin: .5rem .5rem .5rem 1rem;
+    text-align: left;
+    font-size: large;
+    font-weight: 400;
+}
+
+.home-program__timeslot-thumbnail {
+    max-width: 100%;
+    max-height: auto;
+    padding: .25rem;
+}
+
 /* footer */
 .partners {
     background: radial-gradient(var(--teal), #ffffff);
     padding: 4rem;
+    margin-bottom: 4rem;
 }
 
 .partners-logos {
