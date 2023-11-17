@@ -15,7 +15,7 @@ html {
 
 .container {
   padding: .1rem 1rem;
-  margin: 1rem;
+  margin: 1rem 1rem 0;
 }
 
 body {
@@ -61,6 +61,28 @@ hr {
     align-items: center;
 }
 
+/* component container */
+.component,
+.component-img img {
+    border: 1px solid var(--grey);
+    position: relative;
+}
+
+.component-title {
+    font-size: 37px;
+    padding-top: 4rem;
+    background: -webkit-linear-gradient(45deg,var(--orange),var(--teal));
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.component-code {
+    position: relative;
+    border: 1px solid var(--grey);
+}
+
 /* top navigation */
 
 nav {
@@ -79,7 +101,7 @@ header {
   grid-gap: 1rem;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .topnav__logo {
@@ -123,8 +145,6 @@ a:hover {
 
 .topnav__aside {
   justify-self: end;
-  /*this isn't making a LARGER fa icon centered with the text...
-  align-self: center;*/
 }
 
 .topnav .fa-arrow-right-bounce {
@@ -290,7 +310,7 @@ a:hover {
 .home-people__title {
     padding-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:  *repeat(3, 1fr); 
     justify-content: center;
     align-self: center;
 }
@@ -303,7 +323,7 @@ a:hover {
 
 .home-people__groups {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(338px, 1fr));
     align-items: center;
     gap: .25rem
 }
@@ -340,24 +360,58 @@ a:hover {
     display: grid;
 }
 
+/* trying to use radio buttons to hide/show content */
+.accordion {
+    overflow: hidden;
+}
+
+.accordion__input {
+    font-size: 36px;
+    line-spacing: .45px;
+}
+
+.accordion__label {
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion__content {
+    font-size: 18px;
+    letter-spacing: .8px;
+    display: none;
+}
+
+.accordion__label:hover {
+    text-decoration: underline;
+}
+
+.accordion__input {
+    display: none;
+}
+
+.accordion__input:checked ~ .accordion__content{
+    display: block;
+}
+
 .home-people__groups-person {
     border-bottom: 1px solid black;
 }
+
+/* 
+for showing/hiding button content: 
+some light reading
+
+https://stackoverflow.com/questions/6019845/show-hide-div-on-click-with-css (does mention https://jsfiddle.net/4p8CM/10/) 
+
+*/
 
 .home-people__groups-icon {
     justify-content: right;
 }
 
 /* typography */
-.component-title {
-    font-size: 72px;
-    padding-top: 4rem;
-    background: -webkit-linear-gradient(45deg,var(--orange),var(--teal));
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 .home-people__groups h3 {
     font-size: 50px;
@@ -488,22 +542,40 @@ button:hover {
     padding: .25rem;
 }
 
-/* footer */
-.partners {
-    background: radial-gradient(var(--teal), #ffffff);
-    padding: 4rem;
-    margin-bottom: 4rem;
+/* trying to make the gradient change on hover (and when the button is open), but it's not doing anything currently */
+.mus-thumbnail:hover,
+.mus-thumbnail:active {
+    background-image: url('../components/img/mus_thumbnail_hover.png');
 }
 
+.inst-thumbnail:hover,
+.inst-thumbnail:active {
+    background-image: url('../components/img/inst_thumbnail_hover.png');
+}
+
+.perf-thumbnail:hover,
+.perf-thumbnail:active {
+    background-image: url('../components/img/perf_thumbnail_hover.png');
+}
+
+/* footer */
+
 .partners-logos {
+    background: radial-gradient(var(--teal), #ffffff);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 2rem;
 }
 
 .partners-logos img {
-    padding-left: 4rem;
-    padding-top: 4rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    max-height: 6rem;
+}
+
+.parters--img img {
+    max-width: 160px;
 }
 
 .footer {
@@ -528,6 +600,10 @@ button:hover {
     padding: 1rem;
 }
 
+.footer__links a:hover {
+    text-decoration: underline;
+}
+
 .footer__contact {
     font-size: x-large;
     font-weight: 800;
@@ -550,17 +626,18 @@ button:hover {
 .footer__copyright p {
     font-size: small;
 }
-/*
+
 .footer__copyright--link a {
-    text-transform: ;
+    text-transform: capitalize;
+    /* this isn't enforcing just the first letter of the words to be capitalized */
 }
 
 .footer__copyright a:hover {
 
     text-decoration: underline;
 }
-*/
 
+/* Component Library Side Nav */
 .sidenav {
     background: radial-gradient(white, var(--grey));
     height: 100%;
