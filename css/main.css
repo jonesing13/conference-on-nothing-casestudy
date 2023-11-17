@@ -310,7 +310,7 @@ a:hover {
 .home-people__title {
     padding-top: 4rem;
     display: grid;
-    grid-template-columns:  *repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     justify-content: center;
     align-self: center;
 }
@@ -367,7 +367,7 @@ a:hover {
 
 .accordion__input {
     font-size: 36px;
-    line-spacing: .45px;
+    letter-spacing: .45px;
 }
 
 .accordion__label {
