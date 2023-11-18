@@ -319,8 +319,6 @@ a:hover {
 .home-people__groups {
     display: grid;
     grid-template-columns: repeat(3, minmax(338px, 1fr));
-    grid-auto-rows: 1fr;
-    align-items: center;
     gap: .25rem
 }
 
@@ -355,42 +353,58 @@ a:hover {
 
 /* trying to use radio buttons to hide/show content in home-people__group */
 .accordion {
-    overflow: hidden;
+    width: auto;
 }
 
-.accordion__input {
-    font-size: 36px;
-    letter-spacing: .45px;
-}
-
-.accordion__label {
-    display: block;
-    cursor: pointer;
-    position: relative;
-}
-
-.accordion
-
-.accordion__content {
-    font-size: 18px;
-    letter-spacing: .8px;
-    display: none;
-}
-
-.accordion__label:hover {
-    text-decoration: underline;
-}
-
-.accordion__input {
-    display: none;
-}
-
-.accordion__input:checked ~ .accordion__content{
-    display: block;
+ul {
+    padding-left: 0;
 }
 
 .home-people__groups-person {
     border-bottom: 1px solid black;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    background: white;
+    padding: 1rem;
+    padding-top: 0;
+    border-bottom: 1px solid #a3a3a3;
+}
+.accordion li label {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    letter-spacing: .08rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.accordion label + input[type="radio"] {
+    display: none;
+}
+.accordion label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.accordion .person-bio {
+    padding: 0 1rem;
+    line-height: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.person-bio p {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.accordion label + input[type="radio"]:checked + .person-bio {
+    max-height: 450px;
+    transition: rotate(180deg) ease-out .5s;
 }
 
 /* this is for the first item in the accordion group where I added an extra div */
@@ -406,12 +420,7 @@ https://stackoverflow.com/questions/6019845/show-hide-div-on-click-with-css (doe
 
 */
 
-.home-people__groups-icon {
-    align-self: right;
-}
-
 /* typography */
-
 
 .home-people__groups h3 {
     font-size: 50px;
@@ -480,11 +489,6 @@ email:hover {
     line-height: 24px;
 }
 
-.home-people__groups-person-name a {
-    font-size: large;
-    text-transform: capitalize;
-}
-
 /* home-program */
 .home-program {
     padding: 4rem 0;
@@ -514,6 +518,7 @@ button:hover {
 .home-program__timeslot {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 4fr 1fr;
+    grid-auto-rows: 1fr;
     justify-items: left;
     align-items: center;
 }
@@ -548,6 +553,21 @@ button:hover {
     text-decoration: underline;
 }
 
+.home-program__timeslot-thumbnail .mus-thumbnail:hover {
+    max-width: 100%;
+    max-height: 105px;
+    background: url("../components/img/mus_thumbnail_hover.png") no-repeat;
+}
+.home-program__timeslot-thumbnail .inst-thumbnail:hover {
+    max-width: 100%;
+    max-height: 105px;
+    background: url("../components/img/inst_thumbnail_hover.png") no-repeat;
+}
+.home-program__timeslot-thumbnail .perf-thumbnail:hover {
+    max-width: 100%;
+    max-height: 105px;
+    background: url("../components/img/perf_thumbnail_hover.png") no-repeat;
+}
 /* trying to make the gradient change on hover (and when the button is open), but it's not doing anything currently */
 .mus-thumbnail:hover,
 .mus-thumbnail:active {
