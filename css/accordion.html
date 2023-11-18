@@ -25,7 +25,7 @@
             background: white;
             padding: 1rem;
             padding-top: 0;
-            border-bottom: 1px solid grey;
+            border-bottom: 1px solid #a3a3a3;
         }
         .accordion li label {
             padding: 1rem;
@@ -36,7 +36,6 @@
             letter-spacing: .08rem;
             font-weight: 400;
             cursor: pointer;
-            color: #c20000;
         }
         .accordion label + input[type="radio"] {
             display: none;
@@ -51,6 +50,15 @@
         .accordion label + input[type="radio"]:checked + .content {
             max-height: 500px;
             transition: rotate(180deg) ease-out .5s;
+        }
+        /* trying to make the arrow flip */
+        .home-people__groups-icon:active {
+            transition-duration: .5s;;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
         }
 	</style>
 </head>
