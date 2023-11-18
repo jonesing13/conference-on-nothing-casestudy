@@ -192,6 +192,7 @@ a:hover {
 
 .home-hero__callouts {
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     max-width: 1266px;
     padding: 0 5.5rem;
@@ -318,6 +319,7 @@ a:hover {
 .home-people__groups {
     display: grid;
     grid-template-columns: repeat(3, minmax(338px, 1fr));
+    grid-auto-rows: 1fr;
     align-items: center;
     gap: .25rem
 }
@@ -326,35 +328,32 @@ a:hover {
     display: flex;
 }
 
-.home-people__groups-header--artists {
+.home-people__groups-header--artists,
+.home-people__groups-header--djs,
+.home-people__groups-header--scientists {
     color: white;
-    background: radial-gradient(var(--purple),var(--orange));
     padding: 3rem;
     text-align: center;
     border-radius: 8px;
+}
+
+.home-people__groups-header--artists {
+    background: radial-gradient(var(--purple),var(--orange));
 }
 
 .home-people__groups-header--djs {
-    color: white;
     background: radial-gradient(var(--teal),var(--purple));
-    padding: 3rem;
-    text-align: center;
-    border-radius: 8px;
 }
 
 .home-people__groups-header--scientists {
-    color: white;
     background: radial-gradient(var(--orange),var(--teal));
-    padding: 3rem;
-    text-align: center;
-    border-radius: 8px;
 }
 
 .home-people__groups-list {
     display: grid;
 }
 
-/* trying to use radio buttons to hide/show content */
+/* trying to use radio buttons to hide/show content in home-people__group */
 .accordion {
     overflow: hidden;
 }
@@ -369,6 +368,8 @@ a:hover {
     cursor: pointer;
     position: relative;
 }
+
+.accordion
 
 .accordion__content {
     font-size: 18px;
@@ -392,6 +393,11 @@ a:hover {
     border-bottom: 1px solid black;
 }
 
+/* this is for the first item in the accordion group where I added an extra div */
+.home-people__groups-button {
+    display: inline;
+}
+
 /* 
 for showing/hiding button content: 
 some light reading
@@ -401,7 +407,7 @@ https://stackoverflow.com/questions/6019845/show-hide-div-on-click-with-css (doe
 */
 
 .home-people__groups-icon {
-    justify-content: right;
+    align-self: right;
 }
 
 /* typography */
@@ -410,12 +416,14 @@ https://stackoverflow.com/questions/6019845/show-hide-div-on-click-with-css (doe
 .home-people__groups h3 {
     font-size: 50px;
     font-weight: 400;
+    margin-top: 0;
 }
 .home-people__groups p {
     font-size: 14px;
     font-weight: 300;
     letter-spacing: .8px;
     line-height: 16px;
+    margin: 0;
 }
 
 .home-hero p {
@@ -578,6 +586,7 @@ button:hover {
 
 .footer {
     background: linear-gradient(#ff7247, #ffffff);
+    margin-bottom: 4rem;
 }
 
 .footer-intro {
@@ -638,12 +647,14 @@ button:hover {
 /* Component Library Side Nav */
 .sidenav {
     background: radial-gradient(white, var(--grey));
-    height: 100%;
-    width: 240px;
     position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 240px;
     z-index: 1;
     top: 0;
     left: 0;
+    bottom: 0;
     padding: 4rem 1rem;
 }
 

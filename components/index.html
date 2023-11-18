@@ -3,6 +3,7 @@
 <html lang="en-us">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width,initial-scale=1.0">
 	<link rel="stylesheet" href="../css/main.css">	
 	<script src="https://kit.fontawesome.com/97d1e8b022.js" crossorigin="anonymous"></script>
 	<title>CON-Case Study Components</title>
@@ -354,15 +355,18 @@
 </section> <!-- home people groups -->
 
 <div class="accordion">
-	<div>
-		<input type="radio" id="people-groups__section3" name="people-groups__section3-1" class="accordion__input">
-		<label for="people-groups__section3-1" class="accordion__label">Michal Malinský <i class="home-people__groups-icon fa-solid fa-arrow-down fa-xl"></i></label>
-		<div class="accordion__content">
-			<p>
-				Michal Malinský is a researcher and university lecturer at the Department of Particle and Nuclear Physics, Faculty of Mathematics and Physics, Charles University in Prague. He specializes in particle physics beyond the standard model, neutrino physics, supersymmetries, grand unification theory, and science popularization. He is the recipient of a 2013 Neuron Impuls Prize and several European research grants carried out at international centres of high repute, e.g. the European Centre for Nuclear Research in Geneva, Royal Institute of Technology in Stockholm, University of Southampton, University of Valencia. Photograph: Zdeněk Tichý, The Learned Society of Czech Republic						
-			</p>
-		</div> <!-- accordion expanded content -->
-	</div> <!-- accordion headline-->
+	<div class="home-people__groups-button">
+		<i class="home-people__groups-icon fa-solid fa-arrow-down fa-xl"></i>
+		<div class="home-people__groups-content">
+			<input type="radio" id="people-groups__section3" name="people-groups__section3-1" class="accordion__input">
+			<label for="people-groups__section3-1" class="accordion__label">Michal Malinský </label>
+			<div class="accordion__content">
+				<p>
+					Michal Malinský is a researcher and university lecturer at the Department of Particle and Nuclear Physics, Faculty of Mathematics and Physics, Charles University in Prague. He specializes in particle physics beyond the standard model, neutrino physics, supersymmetries, grand unification theory, and science popularization. He is the recipient of a 2013 Neuron Impuls Prize and several European research grants carried out at international centres of high repute, e.g. the European Centre for Nuclear Research in Geneva, Royal Institute of Technology in Stockholm, University of Southampton, University of Valencia. Photograph: Zdeněk Tichý, The Learned Society of Czech Republic						
+				</p>
+			</div> <!-- accordion expanded content -->
+		</div> <!-- accordion collapsed-->
+	</div> <!-- button for accordion -->
 	<div>
 		<input type="radio" id="people-groups__section3" class="accordion__input">
 		<label for="people-groups__section3" class="accordion__label">Mariateresa Crosta <i class="home-people__groups-icon fa-solid fa-arrow-down fa-xl"></i></label>
