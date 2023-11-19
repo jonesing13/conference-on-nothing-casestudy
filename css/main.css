@@ -175,7 +175,7 @@ a:hover {
 /* Home hero */
 .home-hero {
     background: radial-gradient(var(--teal),var(--purple));
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     padding: 2rem 3rem 0;
     justify-content: center;
@@ -322,6 +322,10 @@ a:hover {
 .home-people__groups {
     display: grid;
     grid-template-columns: repeat(3, minmax(338px, 1fr));
+    /* alternate grid layout
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-row: 1fr;
+    */
     gap: .25rem
 }
 
@@ -367,6 +371,15 @@ ul {
     border-bottom: 1px solid black;
 }
 
+/* 
+accordion rules
+used for 
+both 
+People Groups
+and 
+Program List
+*/
+
 .accordion li {
     list-style: none;
     width: 100%;
@@ -385,16 +398,30 @@ ul {
     font-size: x-large;
     letter-spacing: .08rem;
     font-weight: 400;
+}
+/* 
+hides radio buttons 
+for 
+people-list 
+and 
+program-list */
+.accordion label + input[type="radio"],
+.home-program__timeslot-details + input[type="radio"] {
+    display: none;
+}
+.accordion .home-program__timeslot {
     cursor: pointer;
 }
-.accordion label + input[type="radio"] {
-    display: none;
+.accordion-program li {
+    border-top: 1px solid var(--grey);
+    border-bottom: none;
 }
 .accordion label:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-.accordion .person-bio {
+.accordion .person-bio,
+.accordion .home-program__timeslot-description {
     padding: 0 1rem;
     line-height: 1.5rem;
     max-height: 0;
@@ -405,26 +432,13 @@ ul {
     text-align: center;
     padding-bottom: 1rem;
 }
-.accordion label + input[type="radio"]:checked + .person-bio {
-    max-height: 450px;
-    transition: rotate(180deg) ease-out .5s;
+.accordion label + input[type="radio"]:checked + .person-bio,
+.accordion-program + input[type="radio"]:checked + .home-program__timeslot-description {
+    max-height: 400px;
 }
-
-/* this is for the first item in the accordion group where I added an extra div */
-.home-people__groups-button {
-    display: inline;
-}
-
-/* 
-for showing/hiding button content: 
-some light reading
-
-https://stackoverflow.com/questions/6019845/show-hide-div-on-click-with-css (does mention https://jsfiddle.net/4p8CM/10/) 
-
-*/
+/* HMMMMMMMM this ^^ rule isn't letting program description show... */
 
 /* typography */
-
 .home-people__groups h3 {
     font-size: 50px;
     font-weight: 400;
@@ -507,17 +521,6 @@ email:hover {
     justify-content: left;
 }
 
-button {
-    background: none;
-    border: none;
-    border-top: 1px solid black;
-    width: 100%;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
 .home-program__timeslot {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 4fr 1fr;
@@ -547,8 +550,11 @@ button:hover {
     font-weight: 400;
 }
 
-.home-program__timeslot .home-program__timeslot-description {
+.home-program__timeslot-description {
     grid-column: 2 / 5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
 }
 
 .home-program__timeslot-thumbnail {
@@ -576,6 +582,7 @@ button:hover {
     max-height: 105px;
     background: url("../components/img/perf_thumbnail_hover.png") no-repeat;
 }
+
 /* trying to make the gradient change on hover (and when the button is open), but it's not doing anything currently */
 .mus-thumbnail:hover,
 .mus-thumbnail:active {

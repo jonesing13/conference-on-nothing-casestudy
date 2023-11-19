@@ -67,10 +67,10 @@
 
 
 		<!-- hero section -->
-		<div class="container"  id="hero">
+		<div class="container" id="hero">
 			<h2 class="component-title">Hero</h2>
 			<img src="img/home-hero_desktop.png" alt="home hero image">
-			<div class="component home-hero">
+			<div class="container component home-hero">
 				<img src="img/logo-white-large.png" alt="large Conference on NOTHING logo">
 				<div class="home-hero__callouts">
 					<p>
@@ -216,7 +216,7 @@
 					<p>
 						A line-up of external artists that will ignite the night party in the main room from the stage, i.e. the infinite coffee break once the nothing is achieved, being the main conference goal. The sonic representations of new patterns emerging from the void through carefully chosen programming are accompanied at first by visuals from the core group of artists who take over the decor in the main room, as well as the SALO lounge.
 					</p>
-				</div>  <!-- dj header -->
+				</div> <!-- dj header -->
 				<div class="home-people__groups-header--scientists">
 					<h3>Scientists</h3>
 					<p>
@@ -253,7 +253,7 @@
 							</div> <!-- bio info -->
 						</li> <!-- artist -->
 						<li>
-							<label for="artist-info-4" class="home-people__groups-person--name">Jimena Canales <span><i class="home-people__groups-icon fa-solid fa-arrow-down"></i></span></label>
+							<label for="artist-info-4" class="home-people__groups-person--name">Richard Loskot <span><i class="home-people__groups-icon fa-solid fa-arrow-down"></i></span></label>
 							<input type="radio" name="artist-accordion" id="artist-info-4">
 							<div class="person-bio">
 								<p>
@@ -349,7 +349,7 @@
 							<input type="radio" name="accordion" id="scientist-info-4">
 							<div class="person-bio">
 								<p>
-									Jimena Canales is an expert in 19th and 20th century history of the physical sciences, working for a better understanding of science and technology in relation to the arts and humanities. She received an M.A. and Ph.D. from Harvard University in the History of Science and a BSc in Engineering Physics from the Tecnológico de Monterrey. Canales is currently Vice-President of the Board of the American Council of Learned Societies (ACLS). She has received the “Cosmos Prize,” or the “Prize for Young Scholars” of the International Union of History and Philosophy of Science. She has been a visitor at various universities and research centers including the Max Planck Institute for the History of Science in Berlin, MIT,  the Princeton-Weimar Summer School of Media Studies at Princeton University and has lectured widely nationally and internationally, presenting her work at the BBC, the Musée Georges Pompidou, the 11th Shanghai Biennale, and the Serpentine Gallery in London, among others.  She will give an online talk. Photograph: jimenacanales.org
+									Jimena Canales is an expert in 19th and 20th century history of the physical sciences, working for a better understanding of science and technology in relation to the arts and humanities. She received an M.A. and Ph.D. from Harvard University in the History of Science and a BSc in Engineering Physics from the Tecnológico de Monterrey. Canales is currently Vice-President of the Board of the American Council of Learned Societies (ACLS). She has received the “Cosmos Prize,” or the “Prize for Young Scholars” of the International Union of History and Philosophy of Science. She has been a visitor at various universities and research centers including the Max Planck Institute for the History of Science in Berlin, MIT, the Princeton-Weimar Summer School of Media Studies at Princeton University and has lectured widely nationally and internationally, presenting her work at the BBC, the Musée Georges Pompidou, the 11th Shanghai Biennale, and the Serpentine Gallery in London, among others. She will give an online talk.
 								</p>
 							</div>
 						</li>
@@ -384,70 +384,70 @@
 				</h2>
 			</div>
 
-			<button class="home-program__timeslot home-program__timeslot--inst">
-				<img class="home-program__timeslot-thumbnail inst-thumbnail" src="img/inst_thumbnail.png" alt="INST">
-				<time class="home-program__timeslot-details">18:00-23:00</time>
-				<p class="home-program__timeslot-details">
-					Main Room
-				</p>
-				<h3 class="home-program__timeslot-details home-program__timeslot-link">The Night-Club Conference</h3>
-				<i class="fa-solid fa-arrow-down fa-2xl"></i>
-				<p class="home-program__timeslot-details home-program__timeslot-description">
-					Come and enjoy at any time, the unconventional conference environment situated in a night club. Sit down and discuss topics during the breaks. Have some sweets, but be careful, nothing is being served tonight.
-				</p>
-			</button>
-			
-			<button class="home-program__timeslot home-program__timeslot--perf">
-				<img class="home-program__timeslot-thumbnail perf-thumbnail" src="img/perf_thumbnail.png" alt="PERF">
-				<time class="home-program__timeslot-details">18:00-23:00</time>
-				<p class="home-program__timeslot-details">
-					Main Room
-				</p>
-				<h3 class="home-program__timeslot-details home-program__timeslot-link">Secret Deep Cleaning</h3>
-				<i class="fa-solid fa-arrow-down fa-2xl"></i>
-				<p class="home-program__timeslot-details home-program__timeslot-description">
-					Veiled in ambiguity, participants communicate through intangible mediums, seeking the essence of art and science amid fleeting connections. In the absence of action when expected, they embrace the allure of giving without strings attached. Amidst crumpled hints and cryptic symbols, chance entanglements offer glimpses into clandestine exchanges of creativity and wisdom. Dive into the enigma of concealed revelations and the artistry of elusive self-revelation, where identities fade, and wordless tales transpire. By Vojtěch Radakulan.
-				</p>
-			</button>
+			<ul class="accordion program-accordion">
+				<li class="home-program__timeslot home-program__timeslot--perf">
+					<img class="home-program__timeslot-thumbnail perf-thumbnail" src="img/inst_thumbnail.png" alt="INST">
+					<time class="home-program__timeslot-details">18:00 - 23:00</time>
+					<p class="home-program__timeslot-details">
+						Main Room
+					</p>
+					<input type="radio" name="program-list" id ="program__item-1" class="home-program__timeslot-details home-program__timeslot-link">
+					<label for="program__item-1">The Night-Club Conference</label>
+					<i class="fa-solid fa-arrow-down fa-2xl"></i>
+					<div class="home-program__timeslot-description">
+						<p class="home-program__timeslot-details">
+							Come and enjoy at any time, the unconventional conference environment situated in a night club. Sit down and discuss topics during the breaks. Have some sweets, but be careful, nothing is being served tonight.
+						</p>
+					</div>
+				</li>
+				<li class="home-program__timeslot home-program__timeslot--perf">
+					<img class="home-program__timeslot-thumbnail perf-thumbnail" src="img/inst_thumbnail.png" alt="INST">
+					<time class="home-program__timeslot-details">18:00 - 23:00</time>
+					<p class="home-program__timeslot-details">
+						Main Room
+					</p>
+					<input type="radio" name="program-list" id ="program__item-2" class="home-program__timeslot-details home-program__timeslot-link">
+					<label for="program__item-2">Secret Deep Cleaning</label>
+					<i class="fa-solid fa-arrow-down fa-2xl"></i>
+					<div class="home-program__timeslot-description">
+						<p class="home-program__timeslot-details">
+							Veiled in ambiguity, participants communicate through intangible mediums, seeking the essence of art and science amid fleeting connections. In the absence of action when expected, they embrace the allure of giving without strings attached. Amidst crumpled hints and cryptic symbols, chance entanglements offer glimpses into clandestine exchanges of creativity and wisdom. Dive into the enigma of concealed revelations and the artistry of elusive self-revelation, where identities fade, and wordless tales transpire. By Vojtěch Radakulan.
+						</p>
+					</div>
+				</li>
+				<li class="home-program__timeslot home-program__timeslot--perf">
+					<img class="home-program__timeslot-thumbnail perf-thumbnail" src="img/mus_thumbnail.png" alt="MUS">
+					<time class="home-program__timeslot-details">18:00 - 23:00</time>
+					<p class="home-program__timeslot-details">
+						Main Room
+					</p>
+					<input type="radio" name="program-list" id ="program__item-2" class="home-program__timeslot-details home-program__timeslot-link">
+					<label for="program__item-2">Music Of The s[Fears]</label>
+					<i class="fa-solid fa-arrow-down fa-2xl"></i>
+					<div class="home-program__timeslot-description">
+						<p class="home-program__timeslot-details">
+							Celestial spheres are calmly sending their memes, and nothing seems to be happening out there. Yet from time to time, scary <quote>small</quote> events shake the stage… By Oldřich Semerák, Michal Malinský and Vojtěch Radakulan.
+						</p>
+					</div>
+				</li>
+				<li class="home-program__timeslot home-program__timeslot--perf">
+					<img class="home-program__timeslot-thumbnail perf-thumbnail" src="img/perf_thumbnail.png" alt="PERF">
+					<time class="home-program__timeslot-details">18:30 - 22:15</time>
+					<p class="home-program__timeslot-details">
+						Stage
+					</p>
+					<input type="radio" name="program-list" id ="program__item-4" class="home-program__timeslot-details home-program__timeslot-link">
+					<label for="program__item-4">Conference Contributions</label>
+					<i class="fa-solid fa-arrow-down fa-2xl"></i>
+					<div class="home-program__timeslot-description">
+						<p class="home-program__timeslot-details">
+							Should you be at the right place at the right time, you will witness an act on the main stage. A series of short performances jointly produced by the core group of artists and scientists elaborates on various aspects of nothing with decomposing gradation to reach the emptiness. The chairman is silent.
+						</p>
+					</div>
+				</li>
+			</ul>
 
-			<button class="home-program__timeslot home-program__timeslot--mus">
-				<img class="home-program__timeslot-thumbnail mus-thumbnail" src="img/mus_thumbnail.png" alt="MUS">
-				<time class="home-program__timeslot-details">18:00-23:00</time>
-				<p class="home-program__timeslot-details">
-					Stage
-				</p>
-				<h3 class="home-program__timeslot-details home-program__timeslot-link">Music Of The [s]Fears</h3>
-				<i class="fa-solid fa-arrow-down fa-2xl"></i>
-				<p class="home-program__timeslot-details home-program__timeslot-description">
-					Celestial spheres are calmly sending their memes, and nothing seems to be happening out there. Yet from time to time, scary “small” events shake the stage… By Oldřich Semerák, Michal Malinský and Vojtěch Radakulan.
-				</p>
-			</button>
 
-			<button class="home-program__timeslot home-program__timeslot--perf">
-				<img class="home-program__timeslot-thumbnail perf-thumbnail" src="img/perf_thumbnail.png" alt="PERF">
-				<time class="home-program__timeslot-details">18:30-22:15</time>
-				<p class="home-program__timeslot-details">
-					Stage
-				</p>
-				<h3 class="home-program__timeslot-details home-program__timeslot-link">Conference Contributions</h3>
-				<i class="fa-solid fa-arrow-down fa-2xl"></i>
-				<p class="home-program__timeslot-details home-program__timeslot-description">
-					Should you be at the right place at the right time, you will witness an act on the main stage. A series of short performances jointly produced by the core group of artists and scientists elaborates on various aspects of nothing with decomposing gradation to reach the emptiness. The chairman is silent.
-				</p>
-			</button>
-
-			<button class="home-program__timeslot home-program__timeslot--perf">
-				<img class="home-program__timeslot-thumbnail perf-thumbnail" src="img/perf_thumbnail.png" alt="PERF">
-				<time class="home-program__timeslot-details">18:30-18:35</time>
-				<p class="home-program__timeslot-details">
-					Stage
-				</p>
-				<h3 class="home-program__timeslot-details home-program__timeslot-link">No fish today</h3>
-				<i class="fa-solid fa-arrow-down fa-2xl"></i>
-				<p class="home-program__timeslot-details home-program__timeslot-description">
-					Někdy neberou a nechytíš NIC. Čas jde rychle a NIC tě nenapadá. Podíváš se do phonu a NIC tam nemáš. -Bojíš se NIČEHO? By Oldřich Semerák and Michal Malinský.
-				</p>
-			</button>
 
 		</section> <!-- program list -->
 
