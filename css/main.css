@@ -467,7 +467,7 @@ program-list */
     font-weight: 400;
 }
 
-email:hover {
+.email:hover {
     text-decoration: underline;
     transform: ease-out 0.3s;
     cursor: pointer;
@@ -526,6 +526,11 @@ email:hover {
     grid-template-columns: 1fr 2fr 2fr 4fr 1fr;
     justify-items: left;
     align-items: center;
+}
+
+.accordion .home-program__timeslot {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .home-program__timeslot i,
