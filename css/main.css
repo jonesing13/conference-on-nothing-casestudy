@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+/* style colors */
 html {
   --teal: #3ccddd;
   --orange: #ff7247;
@@ -13,6 +14,7 @@ html {
   --grey: #a3a3a3;
 }
 
+/* basic page layouts and typography */
 .container {
   padding: .1rem 1rem;
   margin: 1rem 1rem 0;
@@ -54,6 +56,7 @@ img {
   display: inline-block;
 }
 
+/* lines */
 hr {
     width: 100%;
     height: 1px;
@@ -61,7 +64,7 @@ hr {
     align-items: center;
 }
 
-/* component container */
+/* component gradient coloring */
 .component-title {
     font-size: 37px;
     padding-top: 4rem;
@@ -73,7 +76,6 @@ hr {
 }
 
 /* top navigation */
-
 nav {
   background: radial-gradient(var(--teal), var(--purple));
   box-shadow: 0 30px 40px rgba(0,0,0,.1);
@@ -125,7 +127,6 @@ header {
   border-bottom: 2px solid white;
   cursor: pointer;
 }
-
 
 a:hover {
     transition: all .3s ease-out;
@@ -198,7 +199,8 @@ a:hover {
     padding: 0 5.5rem;
     align-content: center;
 }
-    /* scrolling pills */
+
+/* scrolling pills */
 .pill {
     font-size: large;
     font-weight: 300;
@@ -268,7 +270,8 @@ a:hover {
 
 /* Home About Info */
 .home-about__body {
-    padding: 5rem 10rem 2rem;
+    padding: 2rem 10rem;
+    /* why when I inspect this is there "overflow"? */
 }
 
 .home-info__button:hover {
@@ -322,7 +325,7 @@ a:hover {
 .home-people__groups {
     display: grid;
     grid-template-columns: repeat(3, minmax(338px, 1fr));
-    /* alternate grid layout
+    /* alternate grid layout>>
     grid-template-columns: repeat(3, 1fr);
     grid-template-row: 1fr;
     */
@@ -358,7 +361,9 @@ a:hover {
     display: grid;
 }
 
-/* trying to use radio buttons to hide/show content in home-people__group */
+/* using radio button "hack" to hide/show content in
+home-people__group,
+program-list */
 .accordion {
     width: auto;
 }
@@ -371,15 +376,8 @@ ul {
     border-bottom: 1px solid black;
 }
 
-/* 
-accordion rules
-used for 
-both 
-People Groups
-and 
-Program List
-*/
-
+/* accordion rules used for both People Groups
+and Program List*/
 .accordion li {
     list-style: none;
     width: 100%;
@@ -389,6 +387,7 @@ Program List
     padding-top: 0;
     border-bottom: 1px solid var(--grey);
 }
+
 .accordion li label {
     padding: 1rem;
     display: flex;
@@ -399,27 +398,28 @@ Program List
     letter-spacing: .08rem;
     font-weight: 400;
 }
-/* 
-hides radio buttons 
-for 
-people-list 
-and 
-program-list */
+
+/* hides radio buttons for people-list 
+and program-list */
 .accordion label + input[type="radio"],
 .home-program__timeslot-details + input[type="radio"] {
     display: none;
 }
+
 .accordion .home-program__timeslot {
     cursor: pointer;
 }
+
 .accordion-program li {
     border-top: 1px solid var(--grey);
     border-bottom: none;
 }
+
 .accordion label:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
 .accordion .person-bio,
 .accordion .home-program__timeslot-description {
     padding: 0 1rem;
@@ -428,15 +428,18 @@ program-list */
     overflow: hidden;
     transition: max-height 0.5s;
 }
+
 .person-bio p {
     text-align: center;
     padding-bottom: 1rem;
 }
+
+/*  when a people-list radio is checked, set the bio/description to max-height,
+    when a program-list radio is checked, set the label to selected and the .home-program__timeslot-description following that label will be set to a max-height */
 .accordion label + input[type="radio"]:checked + .person-bio,
-.accordion-program + input[type="radio"]:checked + .home-program__timeslot-description {
+.accordion input[type="radio"]:checked + label + .home-program__timeslot-description {
     max-height: 400px;
 }
-/* HMMMMMMMM this ^^ rule isn't letting program description show... */
 
 /* typography */
 .home-people__groups h3 {
@@ -603,7 +606,9 @@ program-list */
 }
 
 /* footer */
-
+.partners {
+    margin-bottom: 2rem;
+}
 .partners-logos {
     background: radial-gradient(var(--teal), #ffffff);
     display: flex;
@@ -696,12 +701,26 @@ program-list */
     padding: 4rem 1rem;
 }
 
-.sidenav a {
+.sidenav-title {
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.sidenav-link {
     padding: 0 0 2rem;
-    text-decoration: none;
     font-size: medium;
     font-weight: 800;
     display: block;
+}
+
+.sidenav a:hover {
+    text-decoration: underline;
+}
+
+.sidenav-link__back-to-top {
+    margin-top: 2rem;
 }
 
 main {
