@@ -435,7 +435,8 @@ and program-list */
 }
 
 /*  when a people-list radio is checked, set the bio/description to max-height,
-    when a program-list radio is checked, set the label to selected and the .home-program__timeslot-description following that label will be set to a max-height */
+     .... still not quite working for program-list >
+     when a program-list radio is checked, set the label to selected and the .home-program__timeslot-description following that label will be set to a max-height */
 .accordion label + input[type="radio"]:checked + .person-bio,
 .accordion input[type="radio"]:checked + label + .home-program__timeslot-description {
     max-height: 400px;

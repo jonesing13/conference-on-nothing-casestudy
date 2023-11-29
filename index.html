@@ -267,64 +267,81 @@
     </section> <!-- home people groups -->
 
     <section class="container home-program" id="program-list">
-        <div class="home-program__title">
+		<div class="home-program__title">
             <img src="components/img/wobble.png" alt="wobble">
-            <h2>
-                Program
-            </h2>
+            <h2>Program</h2>
         </div>
-    
-        <button class="home-program__timeslot">
-            <img class="home-program__timeslot-thumbnail" src="components/img/inst_thumbnail.png" alt="INST">
-            <time>18:00-23:00</time>
-            <p>
-                Main Room
-            </p>
-            <h3>The Night-Club Conference</h3>
-            <i class="fa-solid fa-arrow-down fa-2xl"></i>
-            <!--<p>
-                Come and enjoy at any time, the unconventional conference environment situated in a night club. Sit down and discuss topics during the breaks. Have some sweets, but be careful, nothing is being served tonight.
-            </p>-->
-        </button>
-        
-        <button class="home-program__timeslot">
-            <img class="home-program__timeslot-thumbnail" src="components/img/perf_thumbnail.png" alt="PERF">
-            <time>18:00-23:00</time>
-            <p>
-                Main Room
-            </p>
-            <h3>Secret Deep Cleaning</h3>
-            <i class="fa-solid fa-arrow-down fa-2xl"></i>
-            <!--<p>
-                Description
-            </p>-->
-        </button>
-    
-        <button class="home-program__timeslot">
-            <img class="home-program__timeslot-thumbnail" src="components/img/mus_thumbnail.png" alt="MUS">
-            <time>18:00-23:00</time>
-            <p>
-                Stage
-            </p>
-            <h3>Music Of The [s]Fears</h3>
-            <i class="fa-solid fa-arrow-down fa-2xl"></i>
-            <!--<p>
-                Description
-            </p>-->
-        </button>
-    
-        <button class="home-program__timeslot">
-            <img class="home-program__timeslot-thumbnail" src="components/img/perf_thumbnail.png" alt="PERF">
-            <time>18:30-22:15</time>
-            <p>
-                Stage
-            </p>
-            <h3>Conference Contributions</h3>
-            <i class="fa-solid fa-arrow-down fa-2xl"></i>
-            <!--<p>
-                Description
-            </p>-->
-        </button>
+
+        <ul class="accordion program-accordion">
+            <li class="home-program__timeslot home-program__timeslot--perf">
+                <img class="home-program__timeslot-thumbnail perf-thumbnail" src="components/img/inst_thumbnail.png" alt="INST">
+                <p class="home-program__timeslot-details">
+                    18:00 - 23:00
+                </p>
+                <p class="home-program__timeslot-details">
+                    Main Room
+                </p>
+                <input type="radio" name="program-list" id ="program__item-1" class="home-program__timeslot-details home-program__timeslot-link">
+                <label for="program__item-1">The Night-Club Conference</label>
+                <i class="fa-solid fa-arrow-down fa-2xl"></i>
+                <div class="home-program__timeslot-description">
+                    <p class="home-program__timeslot-details">
+                        Come and enjoy at any time, the unconventional conference environment situated in a night club. Sit down and discuss topics during the breaks. Have some sweets, but be careful, nothing is being served tonight.
+                    </p>
+                </div> <!-- collapsible description -->
+            </li> <!-- timeslot details for program -->
+            <li class="home-program__timeslot home-program__timeslot--perf">
+                <img class="home-program__timeslot-thumbnail perf-thumbnail" src="components/img/inst_thumbnail.png" alt="INST">
+                <p class="home-program__timeslot-details">
+                    18:00 - 23:00
+                </p>
+                <p class="home-program__timeslot-details">
+                    Main Room
+                </p>
+                <input type="radio" name="program-list" id ="program__item-2" class="home-program__timeslot-details home-program__timeslot-link">
+                <label for="program__item-2">Secret Deep Cleaning</label>
+                <i class="fa-solid fa-arrow-down fa-2xl"></i>
+                <div class="home-program__timeslot-description">
+                    <p class="home-program__timeslot-details">
+                        Veiled in ambiguity, participants communicate through intangible mediums, seeking the essence of art and science amid fleeting connections. In the absence of action when expected, they embrace the allure of giving without strings attached. Amidst crumpled hints and cryptic symbols, chance entanglements offer glimpses into clandestine exchanges of creativity and wisdom. Dive into the enigma of concealed revelations and the artistry of elusive self-revelation, where identities fade, and wordless tales transpire. By Vojtěch Radakulan.
+                    </p>
+                </div> <!-- collapsible description -->
+            </li> <!-- timeslot details for program -->
+            <li class="home-program__timeslot home-program__timeslot--perf">
+                <img class="home-program__timeslot-thumbnail perf-thumbnail" src="components/img/mus_thumbnail.png" alt="MUS">
+                <p class="home-program__timeslot-details">
+                    18:00 - 23:00
+                </p>
+                <p class="home-program__timeslot-details">
+                    Main Room
+                </p>
+                <input type="radio" name="program-list" id ="program__item-3" class="home-program__timeslot-details home-program__timeslot-link">
+                <label for="program__item-3">Music Of The s[Fears]</label>
+                <i class="fa-solid fa-arrow-down fa-2xl"></i>
+                <div class="home-program__timeslot-description">
+                    <p class="home-program__timeslot-details">
+                        Celestial spheres are calmly sending their memes, and nothing seems to be happening out there. Yet from time to time, scary "small" events shake the stage… By Oldřich Semerák, Michal Malinský and Vojtěch Radakulan.
+                    </p>
+                </div> <!-- collapsible description -->
+            </li> <!-- timeslot details for program -->
+            <li class="home-program__timeslot home-program__timeslot--perf">
+                <img class="home-program__timeslot-thumbnail perf-thumbnail" src="components/img/perf_thumbnail.png" alt="PERF">
+                <p class="home-program__timeslot-details">
+                    18:30 - 22:15
+                </p>
+                <p class="home-program__timeslot-details">
+                    Stage
+                </p>
+                <input type="radio" name="program-list" id ="program__item-4" class="home-program__timeslot-details home-program__timeslot-link">
+                <label for="program__item-4">Conference Contributions</label>
+                <i class="fa-solid fa-arrow-down fa-2xl"></i>
+                <div class="home-program__timeslot-description">
+                    <p class="home-program__timeslot-details">
+                        Should you be at the right place at the right time, you will witness an act on the main stage. A series of short performances jointly produced by the core group of artists and scientists elaborates on various aspects of nothing with decomposing gradation to reach the emptiness. The chairman is silent.
+                    </p>
+                </div> <!-- collapsible description -->
+            </li> <!-- timeslot details for program -->
+        </ul>
     
         <button class="home-program__timeslot">
             <img class="home-program__timeslot-thumbnail" src="components/img/perf_thumbnail.png" alt="PERF">
