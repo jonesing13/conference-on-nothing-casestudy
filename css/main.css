@@ -393,7 +393,7 @@ and Program List*/
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     font-size: x-large;
     letter-spacing: .08rem;
     font-weight: 400;
@@ -529,6 +529,10 @@ and program-list */
     grid-template-columns: 1fr 2fr 2fr 4fr 1fr;
     justify-items: left;
     align-items: center;
+}
+
+.home-program__timeslot label {
+    text-align: left;
 }
 
 .accordion .home-program__timeslot {
