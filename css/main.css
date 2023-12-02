@@ -43,7 +43,6 @@ p {
 }
 
 a {
-    text-transform: uppercase;
     text-decoration: none;
     font-weight: 300;
     letter-spacing: .05rem;
@@ -121,6 +120,7 @@ header {
 
 .topnav__links--item a {
     transition: all .3s ease-out;
+    text-transform: uppercase;
 }
 
 .topnav__links--item a:hover {
@@ -289,6 +289,10 @@ a:hover {
     padding-left: 6rem;
     padding-right: 6rem;
     flex-shrink: 1;
+}
+
+.home-info__link-text {
+    text-transform: uppercase;
 }
 
 .home-info__link-spacer {
