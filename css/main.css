@@ -503,6 +503,10 @@ and program-list */
     line-height: 24px;
 }
 
+.footer__contact-email {
+    text-transform: lowercase;
+}
+
 /* home-program */
 .home-program {
     padding: 4rem 0;
