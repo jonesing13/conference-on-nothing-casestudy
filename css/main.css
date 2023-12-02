@@ -270,7 +270,7 @@ a:hover {
 
 /* Home About Info */
 .home-about__body {
-    padding: 2rem 10rem;
+    padding: 2rem 10rem 0rem;
     /* why when I inspect this is there "overflow"? */
 }
 
@@ -393,7 +393,7 @@ and Program List*/
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     font-size: x-large;
     letter-spacing: .08rem;
     font-weight: 400;
