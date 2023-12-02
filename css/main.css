@@ -271,7 +271,11 @@ a:hover {
 /* Home About Info */
 .home-about__body {
     padding: 2rem 10rem 0rem;
-    /* why when I inspect this is there "overflow"? */
+    text-align: center;
+    font-size: x-large;
+    line-height: 130%;
+    letter-spacing: .5px;
+    font-weight: 400;
 }
 
 .home-info__button:hover {
@@ -459,16 +463,6 @@ and program-list */
 .home-hero p {
     font-size: 27px;
     font-weight: 300;
-}
-
-.home-about__body {
-    text-align: center;
-    max-width: 1016px;
-    /*margin: 10rem;*/
-    font-size: x-large;
-    line-height: 130%;
-    letter-spacing: .5px;
-    font-weight: 400;
 }
 
 .email:hover {
