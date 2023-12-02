@@ -188,7 +188,6 @@ a:hover {
     max-width: 100%;
     height: auto;
     padding: 6rem 8rem;
-
 }
 
 .home-hero__callouts {
@@ -198,6 +197,11 @@ a:hover {
     max-width: 1266px;
     padding: 0 5.5rem;
     align-content: center;
+}
+
+.home-hero p {
+    font-size: 27px;
+    font-weight: 300;
 }
 
 /* scrolling pills */
@@ -340,6 +344,19 @@ a:hover {
     gap: .25rem
 }
 
+.home-people__groups h3 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 0;
+}
+.home-people__groups p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 16px;
+    margin: 0;
+}
+
 .home-people__groups-header {
     display: flex;
 }
@@ -448,67 +465,6 @@ and program-list */
 .accordion label + input[type="radio"]:checked + .person-bio,
 .accordion input[type="radio"]:checked + label + .home-program__timeslot-description {
     max-height: 400px;
-}
-
-/* typography */
-.home-people__groups h3 {
-    font-size: 50px;
-    font-weight: 400;
-    margin-top: 0;
-}
-.home-people__groups p {
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: .8px;
-    line-height: 16px;
-    margin: 0;
-}
-
-.home-hero p {
-    font-size: 27px;
-    font-weight: 300;
-}
-
-.email:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.footer-intro p,
-.footer-intro i {
-    color: white;
-}
-
-.footer__team-name,
-.footer__team-detail {
-    font-size: small;
-    letter-spacing: .8px;
-}
-
-.footer__team-name {
-    font-weight: 800;
-    margin: 1rem auto .25rem;
-}
-
-.footer__team-detail {
-    margin: .1rem;
-}
-
-.footer-body {
-    font-size: small;
-    font-weight: 300;
-    line-height: 16px;
-    padding: 10rem 10rem 1rem;
-}
-
-.footer-callout__item p {
-    font-size: larger;
-    letter-spacing: .15rem;
-    line-height: 24px;
-}
-
-.footer__contact-email {
-    text-transform: lowercase;
 }
 
 /* home-program */
@@ -643,11 +599,29 @@ and program-list */
     padding: 1rem;
 }
 
+.footer-intro p,
+.footer-intro i {
+    color: white;
+}
+
+.footer-body {
+    font-size: small;
+    font-weight: 300;
+    line-height: 16px;
+    padding: 10rem 10rem 1rem;
+}
+
 .footer-callout {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
     gap: 2rem;
+}
+
+.footer-callout__item p {
+    font-size: larger;
+    letter-spacing: .15rem;
+    line-height: 24px;
 }
 
 .footer__links {
@@ -672,12 +646,36 @@ and program-list */
     font-weight: 800;
 }
 
+.email:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer__contact-email {
+    text-transform: lowercase;
+}
+
 .footer__team {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1rem;
     margin: 0 10rem 10rem;
+}
+
+.footer__team-name,
+.footer__team-detail {
+    font-size: small;
+    letter-spacing: .8px;
+}
+
+.footer__team-name {
+    font-weight: 800;
+    margin: 1rem auto .25rem;
+}
+
+.footer__team-detail {
+    margin: .1rem;
 }
 
 .footer__copyright p {
