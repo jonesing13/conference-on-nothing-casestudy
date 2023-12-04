@@ -16,7 +16,6 @@ html {
 
 /* basic page layouts and typography */
 .container {
-  padding: .1rem 1rem;
   margin: 1rem 1rem 0;
 }
 
@@ -63,18 +62,7 @@ hr {
     align-items: center;
 }
 
-/* component gradient coloring */
-.component-title {
-    font-size: 37px;
-    padding-top: 4rem;
-    background: -webkit-linear-gradient(45deg,var(--orange),var(--teal));
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* top navigation */
+/* Top Navigation */
 nav {
   background: radial-gradient(var(--teal), var(--purple));
   box-shadow: 0 30px 40px rgba(0,0,0,.1);
@@ -158,6 +146,7 @@ a:hover {
     transform:         translateX(-15px)
   }
 }
+
 .fa-arrow-right-bounce {  
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -168,12 +157,13 @@ a:hover {
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
+
 .fa-arrow-right-bounce:hover {
   animation-name: bounce;
   -moz-animation-name: bounce;
 }
 
-/* Home hero */
+/* Hero */
 .home-hero {
     background: radial-gradient(var(--teal),var(--purple));
     border-radius: 10px;
@@ -204,7 +194,7 @@ a:hover {
     font-weight: 300;
 }
 
-/* scrolling pills */
+/* Scrolling Pills */
 .pill {
     font-size: large;
     font-weight: 300;
@@ -214,7 +204,6 @@ a:hover {
     border-radius: 25px;
     padding: .7rem;
     text-transform: uppercase;
-    /*The text doesn't seem to be sitting on the baseline.... I tried text-align and text-justify center and it didn't seem to adjust anything*/
 }
 
 .pill--orange {
@@ -233,6 +222,8 @@ a:hover {
 }
 
 /*
+commenting out animation rules as they negatively impact other animation on the page
+
 @keyframes scroll {
     from {
         margin-left: 100%;
@@ -248,7 +239,9 @@ a:hover {
 
 .scroller {
     max-width: 1600px;
-    overflow: hidden; /* I'm ok showing overflow w animation... but doing animation w css does make the page horizontally scrollable which is definitely weird and not QUITE right like the OG page does it */
+    overflow: hidden; 
+    /* a note for when this animation is "fixed" to not impact topnav>>>
+    I'm ok showing overflow w animation... but doing animation w css does make the page horizontally scrollable which is definitely weird and not QUITE right like the OG page does it */
     /* set animation for page 
     -webkit-animation-duration: 25s;
     animation-duration: 25s;
@@ -269,10 +262,10 @@ a:hover {
     margin: 0;
     padding: 0;
     padding-block: .5rem;
-    /* javascript to make the rest (animation/scroll) rly happen: https://www.youtube.com/watch?v=iLmBy-HKIAw */
+    /* ENHANCEMENT OPPORTUNITY javascript to make the rest (animation/scroll) rly happen: https://www.youtube.com/watch?v=iLmBy-HKIAw */
 }
 
-/* Home About Info */
+/* About Info */
 .home-about__body {
     padding: 2rem 10rem 0rem;
     text-align: center;
@@ -319,7 +312,7 @@ a:hover {
 }
 
 
-/* Home People Group List (artists, djs, etc) */
+/* People Group List (artists, djs, etc) */
 .home-people__title {
     padding-top: 4rem;
     display: grid;
@@ -337,7 +330,7 @@ a:hover {
 .home-people__groups {
     display: grid;
     grid-template-columns: repeat(3, minmax(338px, 1fr));
-    /* alternate grid layout>>
+    /* alternate grid layout which doesn't honor the same height across columns but does adjust better for width >>
     grid-template-columns: repeat(3, 1fr);
     grid-template-row: 1fr;
     */
@@ -388,7 +381,11 @@ a:hover {
 
 /* using radio button "hack" to hide/show content in
 home-people__group,
-program-list */
+program-list 
+
+accordion rules used for both People Groups
+and Program List
+*/
 .accordion {
     width: auto;
 }
@@ -401,8 +398,6 @@ ul {
     border-bottom: 1px solid black;
 }
 
-/* accordion rules used for both People Groups
-and Program List*/
 .accordion li {
     list-style: none;
     width: 100%;
@@ -460,14 +455,14 @@ and program-list */
 }
 
 /*  when a people-list radio is checked, set the bio/description to max-height,
-     .... still not quite working for program-list >
-     when a program-list radio is checked, set the label to selected and the .home-program__timeslot-description following that label will be set to a max-height */
+     TO DO make this work for program-list >>
+        when a program-list radio is checked, set the label to selected and the .home-program__timeslot-description following that label will be set to a max-height */
 .accordion label + input[type="radio"]:checked + .person-bio,
 .accordion input[type="radio"]:checked + label + .home-program__timeslot-description {
     max-height: 400px;
 }
 
-/* home-program */
+/* Program List */
 .home-program {
     padding: 4rem 0;
 }
@@ -552,7 +547,7 @@ and program-list */
     background: url("../components/img/perf_thumbnail_hover.png") no-repeat;
 }
 
-/* trying to make the gradient change on hover (and when the button is open), but it's not doing anything currently */
+/* ENHANCEMENT OPPORTUNITY update so entire image changes on hover */
 .mus-thumbnail:hover,
 .mus-thumbnail:active {
     background-image: url('../components/img/mus_thumbnail_hover.png');
@@ -568,7 +563,8 @@ and program-list */
     background-image: url('../components/img/perf_thumbnail_hover.png');
 }
 
-/* footer */
+/* Footer */
+/* Partners */
 .partners {
     margin-bottom: 2rem;
 }
@@ -590,6 +586,7 @@ and program-list */
     max-width: 160px;
 }
 
+/* Footer Info/Pillars */
 .footer {
     background: linear-gradient(#ff7247, #ffffff);
     margin-bottom: 4rem;
@@ -682,11 +679,6 @@ and program-list */
     font-size: small;
 }
 
-.footer__copyright--link a {
-    text-transform: capitalize;
-    /* this isn't enforcing just the first letter of the words to be capitalized */
-}
-
 .footer__copyright a:hover {
 
     text-decoration: underline;
@@ -730,4 +722,15 @@ and program-list */
 
 main {
     margin-left: 240px;
+}
+
+/* Component Library Gradient Coloring for Titles */
+.component-title {
+    font-size: 37px;
+    padding-top: 4rem;
+    background: -webkit-linear-gradient(45deg,var(--orange),var(--teal));
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
