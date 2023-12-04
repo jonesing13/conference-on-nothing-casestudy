@@ -536,11 +536,13 @@ and program-list */
     max-height: 105px;
     background: url("../components/img/mus_thumbnail_hover.png") no-repeat;
 }
+
 .home-program__timeslot-thumbnail .inst-thumbnail:hover {
     max-width: 100%;
     max-height: 105px;
     background: url("../components/img/inst_thumbnail_hover.png") no-repeat;
 }
+
 .home-program__timeslot-thumbnail .perf-thumbnail:hover {
     max-width: 100%;
     max-height: 105px;
